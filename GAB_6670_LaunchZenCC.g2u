@@ -1,0 +1,18 @@
+﻿Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+'Launch ZenCC.exe from GSS Menu
+
+V.Local..BulkDeclareLong(iPID)
+Function.Intrinsic.Control.If(V.Caller.Pervasive,"=",True)
+	F.Intrinsic.Task.LaunchAsync("ZenCC.exe",1,V.Local.iPID)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$jwithrow$}$20220318135618688$}$D95tSYIikIvF+oq+s87EtBQePACEH+EyDs2gPmW3WNp3zq+Jao/IowTOZgZIF4f9pwhL6KYt6YLmzfIu7X+zXw==
+Program.Sub.Comments.End
